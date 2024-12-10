@@ -12,6 +12,19 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      container: {
+        screens: {
+          'big': '1600px',
+          '2xl': '1400px',
+          'xl': '1280px',
+          'lg': '1024px',
+          'md': '768px',
+          'sm': '640px',
+        }
+      },
+      fontFamily: {
+        sans: ['var(--font-poppins)', 'sans-serif'],
+      },
     },
   },
   plugins: [],
