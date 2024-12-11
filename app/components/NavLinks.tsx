@@ -14,13 +14,13 @@ export const NavLinks = () => {
 	const pathname = usePathname();
 
 	return (
-		<nav className="flex items-center justify-evenly md:justify-around lg:gap-20 px-6 md:mx-14 my-5 w-auto">
+		<nav className="flex items-center justify-evenly md:justify-around lg:gap-20 md:mx-14 my-5 w-auto">
 			{navLinks.map((link, index) => (
 				<Link
 					key={link.path}
 					href={link.path}
 					className={`hover:text-blue-600 text-sm md:text-xl transition-colors duration-150 ${
-						pathname === link.path ? 'font-bold text-blue-600' : 'text-white px-6'
+						pathname === link.path ? 'font-bold text-blue-600' : 'text-white'
 					}`}
 				>
 					{/* Check if this is the third child and render accordingly */}
