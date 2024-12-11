@@ -14,7 +14,7 @@ export const NavLinks = () => {
 	const pathname = usePathname();
 
 	return (
-		<nav className="flex items-center justify-around gap-20 px-6 mx-14 my-5">
+		<nav className="flex items-center justify-evenly md:justify-around lg:gap-20 px-6 md:mx-14 my-5 w-auto">
 			{navLinks.map((link, index) => (
 				<Link
 					key={link.path}

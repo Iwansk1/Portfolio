@@ -3,19 +3,53 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+	color: var(--foreground);
+	background: var(--background);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Flip Card Styles */
+.card {
+	perspective: 800px;
+}
+
+.card__content {
+	transform-style: preserve-3d;
+	transition: transform 1s ease-in-out; /* Smooth transition on hover and click */
+}
+
+.card__front,
+.card__back {
+	backface-visibility: hidden; /* Hide the back when flipped */
+}
+
+.card__front {
+	/* Front card styles */
+}
+
+.card__back {
+	transform: rotateY(180deg); /* Initially hide the back face */
+}
+
+@media (hover: hover) and (pointer: fine) {
+	/* Hover for desktop */
+	.card:hover .card__content {
+		transform: rotateY(180deg); /* Flip on hover */
+	}
+}
+
+.card__content.rotate-y-180 {
+	transform: rotateY(180deg); /* Flip when state is toggled */
 }

@@ -1,0 +1,66 @@
+[
+    {
+        "skill": "HTML",
+        "progress": 90,
+        "logo": "/img/HTML5.png",
+        "description": "Proficient in crafting semantic and accessible web structures, adhering to modern standards.",
+        "years": 2,
+        "skillType": "Markup Language for structuring content"
+    },
+    {
+        "skill": "CSS",
+        "progress": 95,
+        "logo": "/img/HTML5.png",
+        "description": "Expert in creating responsive and visually appealing designs, including animations and layouts.",
+        "years": 2,
+        "skillType": "Styling Language for web design"
+    },
+    {
+        "skill": "JavaScript",
+        "progress": 65,
+        "logo": "/img/HTML5.png",
+        "description": "Experience in building dynamic user interfaces and handling client-side logic effectively.",
+        "years": 1,
+        "skillType": "Programming Language for web interactivity"
+    },
+    {
+        "skill": "PHP",
+        "progress": 70,
+        "logo": "/img/HTML5.png",
+        "description": "Capable of developing server-side applications and working with databases like MySQL.",
+        "years": 0.5,
+        "skillType": "Server-side Language for backend development"
+    },
+    {
+        "skill": "NextJS",
+        "progress": 40,
+        "logo": "/img/HTML5.png",
+        "description": "Basic knowledge of building performant server-rendered applications and static websites.",
+        "years": 0.25,
+        "skillType": "React Framework for server rendering"
+    },
+    {
+        "skill": "Figma",
+        "progress": 80,
+        "logo": "/img/HTML5.png",
+        "description": "Skilled in designing user-friendly interfaces and collaborating on design projects.",
+        "years": 2.5,
+        "skillType": "Collaborative Tool for UI/UX Design"
+    },
+    {
+        "skill": "TypeScript",
+        "progress": 20,
+        "logo": "/img/HTML5.png",
+        "description": "Understanding of strong typing and building scalable JavaScript applications.",
+        "years": 0.25,
+        "skillType": "Typed Superset for scalable JavaScript"
+    },
+    {
+        "skill": "WordPress",
+        "progress": 20,
+        "logo": "/img/HTML5.png",
+        "description": "Buidling fully functional custom themes and websites.",
+        "years": 0.25,
+        "skillType": "Typed Superset for scalable JavaScript"
+    }
+]

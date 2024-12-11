@@ -1,26 +1,129 @@
-import Image from 'next/image';
+import React from 'react';
+import Link from 'next/link';
+import { Typewriter } from 'nextjs-simple-typewriter';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
+import SkillCard from './components/SkillCard';
+import skills from '@/data/skills.json';
+
+interface TypewriterSectionProps {
+	title: string;
+	words: string[];
+}
+
+const TypewriterSection: React.FC<TypewriterSectionProps> = ({ title, words }) => (
+	<div className="mb-8">
+		<p className="text-2xl">{title}</p>
+		<p className="text-green-400 text-xl">
+			<Typewriter words={words} loop={0} cursor={true} />
+		</p>
+	</div>
+);
+
 export default function Homepage() {
+	const whoAmIWords = [
+		'A Full-Stack Developer. ',
+		'A Tech Enthusiast. ',
+		'Your next collaborator! ',
+	];
+	const whatDoIDoWords = ['testing ', 'testing '];
+
 	return (
 		<main>
-			<section className="container h-[30vh] mt-10 flex flex-row justify-between items-center">
-				<div className="flex flex-col">
-					<h1 className="text-6xl font-bold max-w-2xl">
-						Iwan Bijl <br />
-						Full-Stack Developer{' '}
-					</h1>
-					<h2 className="text-xl mt-5 max-w-lg">
-						With a strong focus on responsive design, clean code, and user-centric solutions, I help
-						businesses turn ideas into impactful products.{' '}
-					</h2>
+			{/* Hero Section */}
+			<section className="w-screen pt-10 bg-waveBlue bg-[length:200%_100%] animate-waveGradient">
+				<div className="container mx-auto flex flex-col items-center justify-center lg:flex-row lg:justify-between h-[60vh] px-6">
+					{/* Hero Text */}
+					<div className="max-w-4xl mb-10 md:mb-0 ">
+						<h1 className="text-6xl mb-4 md:text-7xl leading-tight font-bold">
+							Hello! I am <br />
+							Iwan Bijl
+						</h1>
+						<span className="text-xl md:text-2xl font-bold text-center lg:text-left">
+							Owner of <br />
+							<Link
+								className="underline flex items-center gap-1 hover:text-blue-500 transition"
+								href="#"
+								aria-label="Visit Axedigital-solutions"
+							>
+								Axedigital-solutions
+								<ArrowTopRightOnSquareIcon className="h-5 w-5" />
+							</Link>
+						</span>
+					</div>
+
+					{/* Hero Description */}
+					<div className="max-w-lg mt-8 lg:mt-0 flex flex-col items-center lg:items-start">
+						<h2 className="text-xl md:text-2xl font-semibold mb-4 text-center lg:text-left">
+							A Full-Stack Developer based in The Netherlands.
+						</h2>
+						<p className="text-base md:text-lg leading-relaxed text-center lg:text-left">
+							With a strong focus on responsive design, clean code, and user-centric solutions, I help
+							people and businesses turn ideas into impactful products.
+						</p>
+
+						{/* Call-to-Action Buttons */}
+						<div className="flex flex-row gap-6 mt-8 justify-center lg:justify-start">
+							<Link
+								href="/#projects"
+								className="px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+								aria-label="See my projects"
+							>
+								See my projects
+							</Link>
+							<Link
+								href="/#contact"
+								className="px-6 py-3 bg-slate-100 text-blue-600 rounded-lg text-lg font-semibold shadow-lg hover:bg-slate-300 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+								aria-label="Talk with me"
+							>
+								Talk with me
+							</Link>
+						</div>
+					</div>
 				</div>
-				<Image
-					src="/img/honda.png"
-					alt="Picture of the author"
-					width={400}
-					height={600}
-					blurDataURL="data:..."
-					placeholder="blur"
-				/>
+			</section>
+
+			{/* About Section */}
+			<section className="container mt-10">
+				<div className="text-center">
+					<h2 className="text-5xl font-bold">About me</h2>
+				</div>
+				<div className="flex flex-col mt-10 lg:flex-row justify-between gap-8">
+					{/* Typewriter Text Section */}
+					<div className="flex flex-col gap-6 mt-6 w-full lg:w-2/3">
+						<TypewriterSection title="Who am I?" words={whoAmIWords} />
+						<TypewriterSection title="What do I do?" words={whatDoIDoWords} />
+						<TypewriterSection title="What have I done?" words={whatDoIDoWords} />
+						<TypewriterSection title="What are my plans?" words={whatDoIDoWords} />
+					</div>
+
+					{/* Stats Section */}
+					<div className="flex flex-col gap-6 mt-6 w-full lg:w-1/3">
+						<div className="bg-blue-600 p-5 text-center rounded-lg self-start hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+							<p className="text-4xl font-extrabold mb-2">5</p>
+							<p className="text-xl">Years of experience</p>
+						</div>
+						<div className="bg-blue-600 p-5 text-center rounded-lg self-end hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+							<p className="text-4xl font-extrabold mb-2">5</p>
+							<p className="text-xl">Clients worked for</p>
+						</div>
+						<div className="bg-blue-600 p-5 text-center rounded-lg self-start hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+							<p className="text-4xl font-extrabold mb-2">5</p>
+							<p className="text-xl">Projects worked on</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Skills Section */}
+			<section className="container mt-10">
+				<div className="text-center">
+					<h2 className="text-5xl font-bold">Skills</h2>
+				</div>
+				<div className="flex flex-col justify-center items-center sm:flex-row gap-8 my-10 flex-wrap ">
+					{skills.map((card) => (
+						<SkillCard key={card.skill} card={card} />
+					))}
+				</div>
 			</section>
 		</main>
 	);
