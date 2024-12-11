@@ -42,7 +42,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ card }) => {
 
 	return (
 		<div
-			className="card relative w-80 h-96 perspective-[1000px]"
+			className="card relative w-full md:w-80 h-96 perspective-[1000px]"
 			onClick={handleCardClick} // Enable flip on mobile click
 		>
 			<div

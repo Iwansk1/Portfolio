@@ -31,7 +31,7 @@ export default function Homepage() {
 		<main>
 			{/* Hero Section */}
 			<section className="w-screen md:pt-10 bg-waveBlue bg-[length:200%_100%] animate-waveGradient">
-				<div className="container mx-auto flex flex-col justify-center lg:flex-row lg:justify-between h-[60vh] px-6">
+				<div className="container mx-auto flex flex-col md:items-center justify-center lg:flex-row lg:justify-between h-[60vh] px-6">
 					{/* Hero Text */}
 					<div className="max-w-4xl mb-10 md:mb-0 ">
 						<h1 className="text-3xl mb-4 sm:text-7xl leading-tight font-bold">
