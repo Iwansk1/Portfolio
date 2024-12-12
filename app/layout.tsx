@@ -1,13 +1,13 @@
 import '@/app/globals.css';
 import { NavLinks } from '@/app/components/NavLinks';
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google'; // Import the font
+import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({
 	subsets: ['latin'],
-	weight: ['400', '500', '700'], // Include the weights you need
+	weight: ['400', '500', '700'],
 	style: ['normal', 'italic'],
-	variable: '--font-poppins', // Optional: create a custom CSS variable
+	variable: '--font-poppins',
 });
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en">
+		<html lang="en" className="scroll-smooth">
 			<body
 				className={`${poppins.variable} relative font-sans flex flex-col min-h-screen overflow-x-hidden bg-gray-900 text-gray-100 m-0 p-0`}
 			>

@@ -1,0 +1,36 @@
+[
+    {
+        "title": "Project voor bedrijf x",
+        "image": "/img/david.jpg",
+        "description": "testing the card for the specific company I made it for",
+        "client": "Test bedrijf",
+        "sector": [
+            "Front-end",
+            "Back-end",
+            "Figma",
+            "Css"
+        ]
+    },
+    {
+        "title": "Project voor bedrijf xx",
+        "image": "/img/david.jpg",
+        "description": "testing the card",
+        "client": "Test bedrijf",
+        "sector": "Front-end"
+    },
+    {
+        "title": "Project voor bedrijf xxx",
+        "image": "/img/david.jpg",
+        "description": "testing the card",
+        "client": "Test bedrijf",
+        "sector": "Front-end"
+    },    
+    {
+        "title": "Project voor bedrijf xxxx",
+        "image": "/img/david.jpg",
+        "description": "testing the card",
+        "client": "Test bedrijf",
+        "sector": "Front-end"
+    }
+]
+

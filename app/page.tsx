@@ -1,9 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
+
+// Library imports
 import { Typewriter } from 'nextjs-simple-typewriter';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
+
+// Component imports
 import SkillCard from './components/SkillCard';
+import ProjectCard from './components/ProjectCard';
+
+// Data imports
 import skills from '@/data/skills.json';
+import projects from '@/data/projects.json';
 
 interface TypewriterSectionProps {
 	title: string;
@@ -26,12 +34,12 @@ export default function Homepage() {
 		'Your next collaborator! ',
 	];
 	const whatDoIDoWords = ['testing ', 'testing '];
-
+	const threeProjects = projects.slice(0, 3);
 	return (
-		<main>
+		<section>
 			{/* Hero Section */}
 			<section className="w-screen md:pt-10 bg-waveBlue bg-[length:200%_100%] animate-waveGradient">
-				<div className="container mx-auto flex flex-col md:items-center justify-center lg:flex-row lg:justify-between h-[60vh] px-6">
+				<div className="container mx-auto flex flex-col md:items-center justify-center text-white lg:flex-row lg:justify-between h-[60vh] px-6">
 					{/* Hero Text */}
 					<div className="max-w-4xl mb-10 md:mb-0 ">
 						<h1 className="text-3xl mb-4 sm:text-7xl leading-tight font-bold">
@@ -56,10 +64,10 @@ export default function Homepage() {
 						<h2 className="text-lg md:text-2xl font-semibold mb-4 text-center lg:text-left">
 							A Full-Stack Developer based in The Netherlands.
 						</h2>
-						<p className="text-base md:text-lg leading-relaxed lg:text-left hidden md:block">
+						<h3 className="text-base md:text-lg leading-relaxed lg:text-left hidden md:block">
 							With a strong focus on responsive design, clean code, and user-centric solutions, I help
 							people and businesses turn ideas into impactful products.
-						</p>
+						</h3>
 
 						{/* Call-to-Action Buttons */}
 						<div className="flex flex-row gap-6 mt-8 justify-center lg:justify-start">
@@ -83,7 +91,7 @@ export default function Homepage() {
 			</section>
 
 			{/* About Section */}
-			<section className="container mt-10">
+			<section className="container mt-10" id="about">
 				<div className="text-center">
 					<h2 className="text-5xl font-bold">About me</h2>
 				</div>
@@ -98,15 +106,15 @@ export default function Homepage() {
 
 					{/* Stats Section */}
 					<div className="flex flex-col gap-6 mt-6 w-full lg:w-1/3">
-						<div className="bg-blue-600 animate-pulse md:animate-none p-5 text-center rounded-lg self-start hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+						<div className="bg-blue-600 p-5 text-center rounded-lg sm:self-start hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
 							<p className="text-4xl font-extrabold mb-2">5</p>
 							<p className="text-xl">Years of experience</p>
 						</div>
-						<div className="bg-blue-600 animate-pulse md:animate-none p-5 text-center rounded-lg self-end hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+						<div className="bg-blue-600 p-5 text-center rounded-lg sm:self-end hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
 							<p className="text-4xl font-extrabold mb-2">5</p>
 							<p className="text-xl">Clients worked for</p>
 						</div>
-						<div className="bg-blue-600 animate-pulse md:animate-none p-5 text-center rounded-lg self-start hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+						<div className="bg-blue-600 p-5 text-center rounded-lg sm:self-start hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
 							<p className="text-4xl font-extrabold mb-2">5</p>
 							<p className="text-xl">Projects worked on</p>
 						</div>
@@ -115,16 +123,32 @@ export default function Homepage() {
 			</section>
 
 			{/* Skills Section */}
-			<section className="container mt-10">
+			<section className="container mt-20 sm:mt-10" id="skills">
 				<div className="text-center">
 					<h2 className="text-5xl font-bold">Skills</h2>
 				</div>
-				<div className="flex flex-col justify-center items-center sm:flex-row gap-8 my-10 flex-wrap ">
+				<div className="flex flex-col justify-center md:justify-evenly items-center sm:flex-row gap-8 my-10 flex-wrap">
 					{skills.map((card) => (
 						<SkillCard key={card.skill} card={card} />
 					))}
 				</div>
 			</section>
-		</main>
+
+			<section className="container mt-20 sm:mt-10" id="projects">
+				<div className="text-center">
+					<h2 className="text-5xl font-bold">My Projects</h2>
+				</div>
+				<div className="flex flex-col justify-center md:justify-evenly items-center sm:flex-row gap-4 mt-10 flex-wrap">
+					{threeProjects.map((projectcard) => (
+						<ProjectCard key={projectcard.title} projectcard={projectcard} />
+					))}
+				</div>
+				<div className="mt-5 text-center text-xl ">
+					<Link href={'/projects'} className="underline">
+						More projects +
+					</Link>
+				</div>
+			</section>
+		</section>
 	);
 }

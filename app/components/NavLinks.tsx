@@ -3,11 +3,11 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 const navLinks = [
-	{ name: 'About', path: '/#about' },
-	{ name: 'Projects', path: '/#projects' },
+	{ name: 'About', path: '#about' },
+	{ name: 'Skills', path: '#skills' },
 	{ name: 'Home', path: '/', isImage: true, imageSrc: '/img/honda.png' },
-	{ name: 'Skills', path: '/#skills' },
-	{ name: 'Contact', path: '/#contact' },
+	{ name: 'Projects', path: '#projects' },
+	{ name: 'Contact', path: '#contact' },
 ];
 
 export const NavLinks = () => {
