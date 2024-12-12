@@ -2,6 +2,7 @@ import '@/app/globals.css';
 import { NavLinks } from '@/app/components/NavLinks';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -24,7 +25,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 				<header className="sticky top-0 bg-slate-900 bg-opacity-95 shadow-2xl z-10">
 					<NavLinks />
 				</header>
-				<main className="max-w-full flex-1 mx-auto overflow-hidden mb-5">{children}</main>
+				<main className="max-w-full flex-1 mx-auto overflow-hidden mb-5">
+					{children} <Analytics />
+				</main>
 				{/* Sticky Footer */}
 				<footer className="bg-gray-800 py-6 text-center text-gray-400 mt-auto">
 					<p>&copy; 2024 Iwan Bijl. All rights reserved.</p>
