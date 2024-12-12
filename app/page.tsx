@@ -4,11 +4,11 @@ import Link from 'next/link';
 // Library imports
 import { Typewriter } from 'nextjs-simple-typewriter';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/solid';
 
 // Component imports
 import SkillCard from './components/SkillCard';
 import ProjectCard from './components/ProjectCard';
-
 // Data imports
 import skills from '@/data/skills.json';
 import projects from '@/data/projects.json';
@@ -80,7 +80,7 @@ export default function Homepage() {
 							</Link>
 							<Link
 								href="/#contact"
-								className="md:px-6 md:py-3 px-4 py-2  bg-slate-100 text-center text-blue-600 rounded-lg md:text-lg font-semibold shadow-lg hover:bg-slate-300 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+								className="md:px-6 md:py-3 px-4 py-2 bg-slate-100 text-center text-blue-600 rounded-lg md:text-lg font-semibold shadow-lg hover:bg-slate-300 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
 								aria-label="Talk with me"
 							>
 								Talk with me
@@ -123,7 +123,7 @@ export default function Homepage() {
 			</section>
 
 			{/* Skills Section */}
-			<section className="container mt-20 sm:mt-10" id="skills">
+			<section className="container mt-20" id="skills">
 				<div className="text-center">
 					<h2 className="text-5xl font-bold">Skills</h2>
 				</div>
@@ -134,7 +134,8 @@ export default function Homepage() {
 				</div>
 			</section>
 
-			<section className="container mt-20 sm:mt-10" id="projects">
+			{/* Projects Section */}
+			<section className="container mt-20" id="projects">
 				<div className="text-center">
 					<h2 className="text-5xl font-bold">My Projects</h2>
 				</div>
@@ -144,9 +145,78 @@ export default function Homepage() {
 					))}
 				</div>
 				<div className="mt-5 text-center text-xl ">
-					<Link href={'/projects'} className="underline">
-						More projects +
+					<Link
+						href={'/projects'}
+						className="px-4 py-2 text-center bg-blue-600 text-white rounded-lg md:text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+					>
+						More projects
 					</Link>
+				</div>
+			</section>
+
+			{/* Contact Section */}
+			<section className="container mt-20" id="contact">
+				<div className="text-center">
+					<h2 className="text-5xl font-bold text-white">Contact Me</h2>
+					<p className="mt-4 text-lg text-gray-400">
+						Feel free to reach out! I&apos;m always open to new opportunities and collaborations.
+					</p>
+				</div>
+				<div className="flex flex-col lg:flex-row justify-center gap-8 mt-10">
+					{/* Contact Information */}
+					<div className="flex flex-col w-full lg:w-1/2 gap-6 text-center lg:text-left">
+						{/* Email */}
+						<div className="bg-slate-800 rounded-lg shadow-lg p-6 flex items-center gap-4 hover:bg-blue-600 transition-all duration-300">
+							<EnvelopeIcon className="h-6 w-6 text-blue-500" />
+							<div>
+								<h3 className="text-xl font-bold text-white">Email</h3>
+								<a
+									href="mailto:Iwanbijl@gmail.com"
+									className="mt-2 text-gray-400 hover:text-white transition-colors"
+								>
+									Iwanbijl@gmail.com
+								</a>
+							</div>
+						</div>
+						{/* Phone */}
+						<div className="bg-slate-800 rounded-lg shadow-lg p-6 flex items-center gap-4 hover:bg-blue-600 transition-all duration-300">
+							<PhoneIcon className="h-6 w-6 text-blue-500" />
+							<div>
+								<h3 className="text-xl font-bold text-white">Phone</h3>
+								<a
+									href="tel:+31612490507"
+									className="mt-2 text-gray-400 hover:text-white transition-colors"
+								>
+									06 124 90 507
+								</a>
+							</div>
+						</div>
+						{/* Location */}
+						<div className="bg-slate-800 rounded-lg shadow-lg p-6 flex items-center gap-4 hover:bg-blue-600 transition-all duration-300">
+							<MapPinIcon className="h-6 w-6 text-blue-500" />
+							<div>
+								<h3 className="text-xl font-bold text-white">Location</h3>
+								<p className="mt-2 text-gray-400">The Netherlands</p>
+							</div>
+						</div>
+					</div>
+
+					{/* Call-to-Action */}
+					<div className="flex flex-col w-full lg:w-1/3 justify-center items-center lg:items-start space-y-6">
+						{/* Strong CTA */}
+						<div className="bg-blue-600 flex flex-col p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 text-center lg:text-left">
+							<h3 className="text-2xl font-bold text-white">Let&apos;s work together!</h3>
+							<p className="mt-4 text-gray-300">
+								I&apos;m available for freelance projects, consultations, or collaborations.
+							</p>
+							<Link
+								href="/#contact"
+								className="self-center sm:self-start mt-6 w-fit px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold shadow-lg hover:bg-blue-100 transition duration-300"
+							>
+								Contact Me
+							</Link>
+						</div>
+					</div>
 				</div>
 			</section>
 		</section>
