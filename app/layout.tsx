@@ -13,7 +13,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
 	title: 'Iwan Bijl',
-	description: 'Personal portfolio site made for and by Iwan Bijl using Nextjs',
+	description: 'Personal portfolio site made for and by Iwan Bijl using Nextjs Fullstack Developer',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
