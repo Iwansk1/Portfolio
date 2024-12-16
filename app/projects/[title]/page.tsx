@@ -11,21 +11,22 @@ const slugify = (str: string) => {
 };
 
 interface ProjectDetailPageProps {
-	params: { title: string };
+	params: Promise<{ title: string }>;
 }
 
-export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
-	// Await params to access the 'title' property
-	const { title } = params;
+export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
+    const params = await props.params;
+    // Await params to access the 'title' property
+    const { title } = params;
 
-	// Find the project based on the slugified title
-	const project = projects.find((proj) => slugify(proj.title) === title);
+    // Find the project based on the slugified title
+    const project = projects.find((proj) => slugify(proj.title) === title);
 
-	if (!project) {
+    if (!project) {
 		notFound(); // Trigger 404 if project is not found
 	}
 
-	return (
+    return (
 		<section className="container mt-10">
 			<div className="text-center">
 				<div className="w-full">
