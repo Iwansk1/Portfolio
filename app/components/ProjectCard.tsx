@@ -52,7 +52,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projectcard }) => {
 			{/* Learn More Button */}
 			<div className="flex justify-end mt-6 px-4">
 				<Link
-					href={`/projects/${projectcard.title.toLowerCase().replace(/\s+/g, '-')}`}
+					href={`/projects/${projectcard.title
+						.toLowerCase()
+						.replace(/\s+/g, '-') // Replace spaces with hyphens
+						.replace(/[^\w-]+/g, '')}`} // Remove non-alphanumeric characters except hyphens
 					className="text-sm font-semibold text-white bg-blue-600 py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300"
 				>
 					Learn More

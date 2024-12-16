@@ -47,11 +47,13 @@ const SkillCard: React.FC<SkillCardProps> = ({ card }) => {
 				{/* Front Side */}
 				<div className="card__front relative w-full h-full bg-slate-800 flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg backface-hidden">
 					{isMobile && (
-						<span className="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded-md shadow-md animate-pulse">
-							Tap Me!
+						<span className="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded-md shadow-md">
+							Expand
 						</span>
 					)}
-					<Image src={card.logo} alt={card.skill} width={50} height={50} className="rounded-md mb-5" />
+					<div className="bg-slate-900 shadow-lg w-full h-full flex justify-center items-center">
+						<Image src={card.logo} alt={card.skill} width={50} height={50} className="rounded-md mb-5" />
+					</div>
 					<h2 className="text-xl font-bold text-white">{card.skill}</h2>
 					<h3 className="text-lg text-white">{card.skillType}</h3>
 					<div className="mt-4 text-lg">
@@ -60,11 +62,10 @@ const SkillCard: React.FC<SkillCardProps> = ({ card }) => {
 				</div>
 
 				{/* Back Side */}
-				<div className="card__back absolute inset-0 bg-slate-700 text-white flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg transform rotate-y-180 backface-hidden">
-					<Image src={card.logo} alt={card.skill} width={50} height={50} className="rounded-md mb-5" />
-					<h3 className="text-xl font-semibold">{card.skill}</h3>
-					<p className="mt-2 text-base text-center">{card.description}</p>
-					<div className="w-full mt-8">
+				<div className="card__back absolute inset-0 bg-blue-600 text-white flex flex-col items-center justify-evenly gap-4 p-4 rounded-lg shadow-lg transform rotate-y-180 backface-hidden">
+					<h3 className="text-2xl font-semibold m-6">{card.skill}</h3>
+					<p className="mt-2 text-md text-left flex-grow">{card.description}</p>
+					<div className="w-full shadow-xl">
 						<div className="text-base font-medium text-white mb-2">
 							Progress: <span className="text-green-400">{card.progress}%</span>
 						</div>
