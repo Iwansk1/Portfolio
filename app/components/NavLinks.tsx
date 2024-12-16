@@ -19,7 +19,7 @@ export const NavLinks = () => {
 				<Link
 					key={link.path}
 					href={link.path}
-					className={`hover:text-blue-600 text-sm md:text-xl transition-colors duration-150 ${
+					className={`hover:text-blue-600 text-sm md:text-xl transition-colors duration-150 max-[768px]:w-full  text-center md:text-left ${
 						pathname === link.path ? 'font-bold text-blue-600' : 'text-white'
 					}`}
 				>

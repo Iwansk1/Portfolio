@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 // Library imports
 import { Typewriter } from 'nextjs-simple-typewriter';
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/solid';
 
 // Component imports
@@ -20,7 +19,7 @@ interface TypewriterSectionProps {
 
 const TypewriterSection: React.FC<TypewriterSectionProps> = ({ title, words }) => (
 	<div className="mb-8">
-		<p className="text-2xl">{title}</p>
+		<p className="text-3xl font-semibold">{title}</p>
 		<p className="text-green-400 text-xl">
 			<Typewriter words={words} loop={0} cursor={true} />
 		</p>
@@ -39,38 +38,37 @@ export default function Homepage() {
 		<section>
 			{/* Hero Section */}
 			<section className="w-screen md:pt-10 bg-waveBlue bg-[length:200%_100%] animate-waveGradient">
-				<div className="container mx-auto flex flex-col md:items-center justify-center text-white lg:flex-row lg:justify-between h-[60vh] px-6">
+				<div className="container mx-auto flex flex-col md:items-center justify-evenly text-white lg:flex-row lg:justify-between h-[60vh] px-6">
 					{/* Hero Text */}
-					<div className="max-w-4xl mb-10 md:mb-0 ">
-						<h1 className="text-3xl mb-4 sm:text-7xl leading-tight font-bold">
-							Hello! I am <br />
+					<div className="max-w-4xl text-center sm:text-left md:mb-0 ">
+						<h1 className="text-4xl mb-4 sm:text-7xl leading-tight font-bold">
+							Hello! I&apos;m <br />
 							Iwan Bijl
 						</h1>
-						<span className="text-md md:text-2xl font-bold text-left lg:text-left">
-							Owner of <br />
-							<Link
-								className="underline flex items-center gap-1 hover:text-blue-500 transition"
-								href="#"
-								aria-label="Visit Axedigital-solutions"
-							>
-								Axedigital-solutions
-								<ArrowTopRightOnSquareIcon className="h-5 w-5" />
-							</Link>
-						</span>
+						<h2 className="text-base md:text-2xl md:font-semibold mb-4 text-left">
+							A Full-Stack Developer based in The Netherlands. <br />{' '}
+							<span className="sm:hidden">
+								and founder of{' '}
+								<Link href={'/#'} className="font-bold underline">
+									Axedigital-solutions
+								</Link>
+							</span>
+						</h2>
 					</div>
 
 					{/* Hero Description */}
 					<div className="max-w-lg md:mt-8 lg:mt-0 flex flex-col items-center lg:items-start">
-						<h2 className="text-lg md:text-2xl font-semibold mb-4 text-center lg:text-left">
-							A Full-Stack Developer based in The Netherlands.
-						</h2>
 						<h3 className="text-base md:text-lg leading-relaxed lg:text-left hidden md:block">
-							With a strong focus on responsive design, clean code, and user-centric solutions, I help
-							people and businesses turn ideas into impactful products.
+							Through my company,{' '}
+							<Link href={'/#'} className="font-bold underline">
+								Axedigital-solutions
+							</Link>
+							, I craft responsive designs, write clean, maintainable code, and deliver user-focused
+							solutions. Let&apos;s transform ideas into impactful products together.
 						</h3>
 
 						{/* Call-to-Action Buttons */}
-						<div className="flex flex-row gap-6 mt-8 justify-center lg:justify-start">
+						<div className="flex flex-row gap-6 md:mt-8 justify-center lg:justify-start">
 							<Link
 								href="/#projects"
 								className="md:px-6 md:py-3 px-4 py-2 text-center bg-blue-600 text-white rounded-lg md:text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
@@ -97,7 +95,7 @@ export default function Homepage() {
 				</div>
 				<div className="flex flex-col mt-10 lg:flex-row justify-between gap-8">
 					{/* Typewriter Text Section */}
-					<div className="flex flex-col gap-6 mt-6 w-full lg:w-2/3">
+					<div className="flex flex-col gap-6 mt-6 w-full">
 						<TypewriterSection title="Who am I?" words={whoAmIWords} />
 						<TypewriterSection title="What do I do?" words={whatDoIDoWords} />
 						<TypewriterSection title="What have I done?" words={whatDoIDoWords} />
@@ -105,16 +103,16 @@ export default function Homepage() {
 					</div>
 
 					{/* Stats Section */}
-					<div className="flex flex-col gap-6 mt-6 w-full lg:w-1/3">
-						<div className="bg-blue-600 p-5 text-center rounded-lg sm:self-start hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+					<div className="flex flex-col gap-6 mt-6 md:w-1/4 items-end">
+						<div className="bg-blue-600 p-5 text-center rounded-lg w-full hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
 							<p className="text-4xl font-extrabold mb-2">5</p>
 							<p className="text-xl">Years of experience</p>
 						</div>
-						<div className="bg-blue-600 p-5 text-center rounded-lg sm:self-end hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+						<div className="bg-blue-600 p-5 text-center rounded-lg w-full hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
 							<p className="text-4xl font-extrabold mb-2">5</p>
 							<p className="text-xl">Clients worked for</p>
 						</div>
-						<div className="bg-blue-600 p-5 text-center rounded-lg sm:self-start hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+						<div className="bg-blue-600 p-5 text-center rounded-lg w-full hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
 							<p className="text-4xl font-extrabold mb-2">5</p>
 							<p className="text-xl">Projects worked on</p>
 						</div>
@@ -123,7 +121,7 @@ export default function Homepage() {
 			</section>
 
 			{/* Skills Section */}
-			<section className="container mt-20" id="skills">
+			<section className="container mt-20 md:mt-32" id="skills">
 				<div className="text-center">
 					<h2 className="text-5xl font-bold">Skills</h2>
 				</div>
@@ -135,7 +133,7 @@ export default function Homepage() {
 			</section>
 
 			{/* Projects Section */}
-			<section className="container mt-20" id="projects">
+			<section className="container mt-20 md:mt-32" id="projects">
 				<div className="text-center">
 					<h2 className="text-5xl font-bold">My Projects</h2>
 				</div>
@@ -144,10 +142,10 @@ export default function Homepage() {
 						<ProjectCard key={projectcard.title} projectcard={projectcard} />
 					))}
 				</div>
-				<div className="mt-5 text-center text-xl ">
+				<div className="mt-10 text-center">
 					<Link
 						href={'/projects'}
-						className="px-4 py-2 text-center bg-blue-600 text-white rounded-lg md:text-lg font-semibold shadow-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+						className="px-4 py-2 text-center bg-blue-600 text-white rounded-lg md:text-xl font-semibold shadow-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
 					>
 						More projects
 					</Link>
@@ -155,7 +153,7 @@ export default function Homepage() {
 			</section>
 
 			{/* Contact Section */}
-			<section className="container mt-20" id="contact">
+			<section className="container mt-20 md:mt-32" id="contact">
 				<div className="text-center">
 					<h2 className="text-5xl font-bold text-white">Contact Me</h2>
 					<p className="mt-4 text-lg text-gray-400">
@@ -164,7 +162,7 @@ export default function Homepage() {
 				</div>
 				<div className="flex flex-col lg:flex-row justify-center gap-8 mt-10">
 					{/* Contact Information */}
-					<div className="flex flex-col w-full lg:w-1/2 gap-6 text-center lg:text-left">
+					<div className="flex flex-col w-full lg:w-1/2 gap-6 text-left">
 						{/* Email */}
 						<div className="bg-slate-800 rounded-lg shadow-lg p-6 flex items-center gap-4 hover:bg-blue-600 transition-all duration-300">
 							<EnvelopeIcon className="h-6 w-6 text-blue-500" />
@@ -172,7 +170,7 @@ export default function Homepage() {
 								<h3 className="text-xl font-bold text-white">Email</h3>
 								<a
 									href="mailto:Iwanbijl@gmail.com"
-									className="mt-2 text-gray-400 hover:text-white transition-colors"
+									className="text-gray-400 hover:text-white transition-colors"
 								>
 									Iwanbijl@gmail.com
 								</a>
@@ -183,10 +181,7 @@ export default function Homepage() {
 							<PhoneIcon className="h-6 w-6 text-blue-500" />
 							<div>
 								<h3 className="text-xl font-bold text-white">Phone</h3>
-								<a
-									href="tel:+31612490507"
-									className="mt-2 text-gray-400 hover:text-white transition-colors"
-								>
+								<a href="tel:+31612490507" className=" text-gray-400 hover:text-white transition-colors">
 									06 124 90 507
 								</a>
 							</div>
@@ -196,7 +191,7 @@ export default function Homepage() {
 							<MapPinIcon className="h-6 w-6 text-blue-500" />
 							<div>
 								<h3 className="text-xl font-bold text-white">Location</h3>
-								<p className="mt-2 text-gray-400">The Netherlands</p>
+								<p className=" text-gray-400">The Netherlands</p>
 							</div>
 						</div>
 					</div>

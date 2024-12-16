@@ -27,9 +27,9 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
 	}
 
 	return (
-		<section className="container flex gap-8 mt-10">
+		<section className="container flex flex-col sm:flex-row gap-8 mt-10">
 			{/* Sidebar */}
-			<aside className="w-64 h-fit pb-8 bg-gray-800 p-6 rounded-lg shadow-md sticky top-10">
+			<aside className="w-full sm:w-64 h-fit pb-8 bg-gray-800 p-6 rounded-lg shadow-md sticky top-10">
 				<div className="mb-6">
 					<Link
 						href="/projects"
@@ -61,15 +61,8 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
 			{/* Main Content */}
 			<section className="flex-1">
 				<div className="text-center">
-					{/* Updated Image component with layout="responsive" and object-cover */}
-					<div className="relative w-full h-72">
-						<Image
-							src={project.image}
-							alt={project.title}
-							layout="fill"
-							objectFit="cover" // Ensure the image covers the area without distortion
-							className="rounded-lg"
-						/>
+					<div className="relative w-full h-[500px]">
+						<Image src={project.image} alt={project.title} fill className="object-cover" priority />
 					</div>
 					<h2 className="text-5xl font-bold mt-6">{project.title}</h2>
 					<h3 className="text-xl text-gray-700">{project.client}</h3>
