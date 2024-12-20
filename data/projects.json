@@ -1,36 +1,58 @@
 [
-    {
-        "title": "Project voor bedrijf x",
-        "image": "/img/david.jpg",
-        "description": "testing the card for the specific company I made it for",
-        "client": "Test bedrijf",
-        "sector": [
-            "Front-end",
-            "Back-end",
-            "Figma",
-            "Css"
-        ]
-    },
-    {
-        "title": "Project voor bedrijf xx",
-        "image": "/img/david.jpg",
-        "description": "testing the card",
-        "client": "Test bedrijf",
-        "sector": "Front-end"
-    },
-    {
-        "title": "Project voor bedrijf xxx",
-        "image": "/img/david.jpg",
-        "description": "testing the card",
-        "client": "Test bedrijf",
-        "sector": "Front-end"
-    },    
-    {
-        "title": "Project voor bedrijf xxxx",
-        "image": "/img/david.jpg",
-        "description": "testing the card",
-        "client": "Test bedrijf",
-        "sector": "Front-end"
-    }
+  {
+    "title": "Webplatform voor klanten",
+    "image": "/img/david.jpg",
+    "description": "Voor bedrijf X hebben we een geavanceerd webplatform ontwikkeld waarmee klanten eenvoudig hun diensten kunnen beheren. Het project omvat zowel front-end als back-end ontwikkeling, evenals een gebruiksvriendelijke interface.",
+    "client": "Test Bedrijf X",
+    "sector": [
+      "Front-end",
+      "Back-end",
+      "Figma",
+      "CSS",
+      "React",
+      "Node.js"
+    ]
+  },
+  {
+    "title": "E-commerce Oplossing",
+    "image": "/img/david.jpg",
+    "description": "Voor bedrijf XX hebben we een e-commerce platform ontwikkeld met een intuïtieve gebruikersinterface en een krachtige back-end voor het beheren van producten, bestellingen en betalingen. Het platform is geoptimaliseerd voor zowel desktop als mobiel gebruik.",
+    "client": "Test Bedrijf XX",
+    "sector": [
+      "Front-end",
+      "Back-end",
+      "E-commerce",
+      "UI/UX Design",
+      "React",
+      "MongoDB"
+    ]
+  },
+  {
+    "title": "Bedrijfssite met SEO-optimalisatie",
+    "image": "/img/david.jpg",
+    "description": "Bedrijf XXX wilde zijn online zichtbaarheid verbeteren, dus hebben we een nieuwe website ontwikkeld die is geoptimaliseerd voor zoekmachines (SEO). Het ontwerp was modern, met nadruk op conversies en het vergroten van het aantal leads.",
+    "client": "Test Bedrijf XXX",
+    "sector": [
+      "Front-end",
+      "Back-end",
+      "SEO",
+      "WordPress",
+      "HTML5",
+      "CSS3"
+    ]
+  },
+  {
+    "title": "Klantportaal voor betere communicatie",
+    "image": "/img/david.jpg",
+    "description": "Voor bedrijf XXXX hebben we een klantportaal ontwikkeld waarmee klanten eenvoudig kunnen communiceren met de klantenservice en hun bestellingen kunnen volgen. De focus lag op het verbeteren van de klanttevredenheid en het stroomlijnen van processen.",
+    "client": "Test Bedrijf XXXX",
+    "sector": [
+      "Front-end",
+      "Back-end",
+      "Figma",
+      "React",
+      "Node.js",
+      "MongoDB"
+    ]
+  }
 ]
-

@@ -27,25 +27,25 @@ body {
 
 .card__content {
 	transform-style: preserve-3d;
-	transition: transform 1s ease-in-out; /* Smooth transition on hover and click */
+	transition: transform 1s ease-in-out;
 }
 
 .card__front,
 .card__back {
-	backface-visibility: hidden; /* Hide the back when flipped */
+	backface-visibility: hidden;
 }
 
 .card__back {
-	transform: rotateY(180deg); /* Initially hide the back face */
+	transform: rotateY(180deg);
 }
 
 @media (hover: hover) and (pointer: fine) {
 	/* Hover for desktop */
 	.card:hover .card__content {
-		transform: rotateY(180deg); /* Flip on hover */
+		transform: rotateY(180deg);
 	}
 }
 
 .card__content.rotate-y-180 {
-	transform: rotateY(180deg); /* Flip when state is toggled */
+	transform: rotateY(180deg);
 }

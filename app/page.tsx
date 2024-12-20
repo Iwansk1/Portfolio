@@ -137,7 +137,7 @@ export default function Homepage() {
 				<div className="text-center">
 					<h2 className="text-5xl font-bold">My Projects</h2>
 				</div>
-				<div className="flex flex-col justify-center md:justify-evenly items-center sm:flex-row gap-4 mt-10 flex-wrap">
+				<div className="flex flex-col justify-center md:justify-around items-center sm:flex-row mt-10 gap-4 sm:gap-0 flex-wrap">
 					{threeProjects.map((projectcard) => (
 						<ProjectCard key={projectcard.title} projectcard={projectcard} />
 					))}

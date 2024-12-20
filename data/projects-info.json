@@ -1,0 +1,30 @@
+[
+  {
+    "heading": "Project voor bedrijf x: Webontwikkeling",
+    "problem": "Het bestaande systeem was verouderd en had beperkte functionaliteit, wat de klant belemmerde om snel te reageren op marktvraag. De gebruikerservaring was niet optimaal, wat leidde tot een hoog uitvalpercentage op de website.",
+    "solution": "We hebben de website volledig herontworpen met moderne technologieën zoals React en Node.js voor betere prestaties en schaalbaarheid. Daarnaast hebben we een responsief ontwerp geïmplementeerd om ervoor te zorgen dat de website op verschillende apparaten goed functioneerde. We hebben de laadsnelheid verbeterd door optimalisaties toe te passen en content effectief te laden.",
+    "technology": ["React", "Node.js", "CSS", "Figma"],
+    "outcome": "De nieuwe website leidde tot een 20% toename in klantinteractie, een lager uitvalpercentage, en een verbeterde gebruikerservaring. De klant heeft nu sneller toegang tot zijn diensten en de website kan gemakkelijker schalen naarmate de gebruikersbasis groeit. Dit heeft bijgedragen aan een verbeterde klanttevredenheid en een grotere omzet."
+  },
+  {
+    "heading": "Project voor bedrijf xx: E-commerce Platform",
+    "problem": "De klant had een verouderde e-commerce website die traag was, geen mobielvriendelijke ervaring bood, en beperkte functionaliteit had. Klanten konden moeilijk navigeren en het afrekenproces was omslachtig, wat resulteerde in een hoog verlaten winkelwagentarief.",
+    "solution": "We hebben een nieuwe e-commerce site ontwikkeld met een responsief ontwerp en een snellere laadtijd. We implementeerden moderne technologieën zoals Vue.js en Vuetify voor een dynamische gebruikersinterface en verbeterden het afrekenproces door integratie van een gebruiksvriendelijke en veilige betalingsgateway.",
+    "technology": ["Vue.js", "Vuetify", "CSS", "Figma"],
+    "outcome": "De klant zag een 35% stijging in de verkoop en een 40% hogere klanttevredenheid dankzij de verbeterde gebruikerservaring. De website biedt nu een snelle en betrouwbare winkelervaring, wat resulteerde in een lager aantal verlaten winkelwagentjes en hogere conversies. De klant rapporteerde ook een toename van het mobiele verkeer."
+  },
+  {
+    "heading": "Project voor bedrijf xxx: Bedrijfspagina",
+    "problem": "Het bedrijf had geen online aanwezigheid, wat resulteerde in gemiste kansen, een gebrek aan zichtbaarheid, en beperkte toegang tot potentiële klanten. De bestaande marketinginspanningen waren niet effectief, omdat het bedrijf niet goed zichtbaar was op zoekmachines.",
+    "solution": "We hebben een moderne bedrijfswebsite ontwikkeld, gericht op het verbeteren van de online zichtbaarheid en zoekmachineoptimalisatie (SEO). We hebben de structuur van de website geoptimaliseerd voor zoekmachines en de inhoud geactualiseerd om beter aan te sluiten bij de zoektermen van de doelgroep.",
+    "technology": ["HTML", "CSS", "JavaScript", "WordPress"],
+    "outcome": "Het bedrijf zag een 50% toename in organisch verkeer en een groei in leads door de verbeterde zichtbaarheid. Door de toepassing van SEO-principes steeg de zoekmachineranglijst van het bedrijf, waardoor ze beter werden gevonden door potentiële klanten. Dit leidde tot een aanzienlijke groei in het aantal aanvragen en samenwerkingsovereenkomsten."
+  },
+  {
+    "heading": "Project voor bedrijf xxxx: Klantportaal",
+    "problem": "Het klantenportaal van het bedrijf was moeilijk te navigeren, had beperkte functionaliteit, en was niet geïntegreerd met het bestaande klantenserviceteam. Dit leidde tot inefficiëntie en klantonvrede.",
+    "solution": "We hebben een nieuw klantportaal ontwikkeld met gebruiksvriendelijke navigatie, integratie van klantondersteuningssystemen, en real-time toegang tot klantinformatie. Het portaal biedt nu eenvoudige toegang tot veelgestelde vragen, serviceverzoeken, en contactmogelijkheden, wat de communicatie tussen klanten en klantenservice verbeterde.",
+    "technology": ["React", "Node.js", "MongoDB", "Figma"],
+    "outcome": "Het nieuwe portaal leidde tot een 25% snellere klantenservice-reactietijd, verhoogde klanttevredenheid en verbeterde efficiëntie in het gebruik van het portaal. Klanten gaven aan de gebruiksvriendelijkheid te waarderen, en het aantal openstaande tickets werd verminderd doordat klanten nu zelf veel vragen konden oplossen via het portaal."
+  }
+]

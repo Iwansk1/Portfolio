@@ -36,7 +36,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ card }) => {
 
 	return (
 		<div
-			className="card relative w-full max-w-80 md:w-80 h-96 perspective-[1000px]"
+			className="card relative w-full shadow-2xl max-w-80 md:w-80 h-96 perspective-[1000px]"
 			onClick={handleCardClick}
 		>
 			<div
