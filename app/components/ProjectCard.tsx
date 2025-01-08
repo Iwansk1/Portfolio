@@ -17,14 +17,15 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ projectcard }) => {
 	const sectors = Array.isArray(projectcard.sector) ? projectcard.sector : [projectcard.sector];
 
-	const excerptDescription = (description: string, limit: number = 130) => {
-		return description.length > limit ? `${description.slice(0, limit)}...` : description;
+	const excerptDescription = (description: string, limit: number = 25) => {
+		const words = description.split(' ');
+		return words.length > limit ? `${words.slice(0, limit).join(' ')}...` : description;
 	};
 	const excerptSectors = (sector: string | string[], limit: number = 3) => {
-		return sectors.length > limit ? [...sectors.slice(0, limit)] : sectors;
+		return sectors.length > limit ? sectors.slice(0, limit) : sectors;
 	};
 	return (
-		<div className="relative flex flex-col w-72 sm:w-1/4 h-[25rem] pb-6 sm:h-[35rem] rounded-lg bg-slate-800 shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+		<div className="relative flex flex-col w-72 sm:w-[25rem] h-[25rem] pb-6 sm:h-[35rem] rounded-lg bg-slate-800 shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
 			{/* Image Section */}
 			<div className="relative max-h-52 h-full w-full overflow-hidden rounded-t-md">
 				<Image

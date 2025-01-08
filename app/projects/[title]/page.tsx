@@ -32,9 +32,10 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
 	const projectInfo = projectsinfo[projectIndex];
 
 	return (
-		<section className="container flex flex-col sm:flex-row gap-8 mt-10">
+		<section className="container relative flex flex-col sm:flex-row gap-8 mt-10">
+			{' '}
 			{/* Sidebar */}
-			<aside className="w-full sm:w-64 h-fit pb-8 bg-gray-800 p-6 rounded-lg shadow-md sticky top-10">
+			<aside className="w-full sm:w-64 h-fit pb-8 bg-gray-800 p-6 rounded-lg shadow-md sticky top-0">
 				<div className="mb-6">
 					<Link
 						href="/projects"
@@ -62,16 +63,15 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
 					</div>
 				</div>
 			</aside>
-
 			{/* Main Content */}
 			<section className="flex-1">
 				<div className="text-center">
 					<div className="mb-10">
 						<div className="relative w-full h-[500px]">
-							<Image src={project.image} alt={project.title} fill className="object-cover" priority />
+							<Image src={project.image} alt={project.title} fill className="object-cover" />
 						</div>
-						<h2 className="text-5xl font-bold mt-6">{project.title}</h2>
-						<h3 className="text-xl text-gray-700">{project.client}</h3>
+						<h2 className="text-5xl font-bold mt-6">{project.client}</h2>
+						<h3 className="text-2xl text-gray-200 mt-4">{project.title}</h3>
 					</div>
 					<div className="text-left">
 						{/* Display Project Info */}
@@ -91,18 +91,6 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
 							{' '}
 							<h4 className="text-3xl text-center font-semibold mb-4">Result:</h4>
 							<p className="mt-2 text-gray-200">{projectInfo.outcome}</p>
-						</div>
-					</div>
-
-					<div className="mb-10">
-						{' '}
-						<h4 className="text-3xl text-center font-semibold mb-4">Technologies used:</h4>
-						<div className="mt-2 text-gray-200 flex justify-center gap-4">
-							{projectInfo.technology.map((tech, idx) => (
-								<div key={idx} className="text-xl mt-1 text-black w-fit bg-gray-200 px-3 py-1 rounded-lg">
-									{tech}
-								</div>
-							))}
 						</div>
 					</div>
 				</div>

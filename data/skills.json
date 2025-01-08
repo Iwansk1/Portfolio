@@ -3,64 +3,72 @@
         "skill": "HTML",
         "progress": 90,
         "logo": "/img/HTML5.png",
-        "description": "Proficient in crafting semantic and accessible web structures, adhering to modern standards.",
+        "description": "Craft semantic, accessible, and SEO-friendly web structures using modern HTML5 standards.",
         "years": 2,
-        "skillType": "Markup Language for structuring content"
+        "skillType": "Markup Language",
+        "className": "col-span-2 row-span-1"
     },
     {
         "skill": "CSS",
         "progress": 95,
-        "logo": "/img/HTML5.png",
-        "description": "Expert in creating responsive and visually appealing designs, including animations and layouts.",
+        "logo": "/img/CSS3.png",
+        "description": "Design responsive, visually appealing websites with advanced layouts, animations, and transitions.",
         "years": 2,
-        "skillType": "Styling Language for web design"
+        "skillType": "Styling Language",
+        "className": "col-span-1 row-span-2"
     },
     {
         "skill": "JavaScript",
         "progress": 65,
-        "logo": "/img/HTML5.png",
-        "description": "Experience in building dynamic user interfaces and handling client-side logic effectively.",
+        "logo": "/img/JS.png",
+        "description": "Develop interactive, dynamic web applications with client-side scripting and functionality.",
         "years": 1,
-        "skillType": "Programming Language for web interactivity"
+        "skillType": "Programming Language",
+        "className": "col-span-1 row-span-1"
     },
     {
         "skill": "PHP",
         "progress": 70,
-        "logo": "/img/HTML5.png",
-        "description": "Capable of developing server-side applications and working with databases like MySQL.",
+        "logo": "/img/PHP.png",
+        "description": "Create dynamic server-side web applications and work with databases such as MySQL.",
         "years": 0.5,
-        "skillType": "Server-side Language for backend development"
+        "skillType": "Server-side Language",
+        "className": "col-span-2 row-span-1"
     },
     {
-        "skill": "NextJS",
+        "skill": "Next.js",
         "progress": 40,
-        "logo": "/img/HTML5.png",
-        "description": "Basic knowledge of building performant server-rendered applications and static websites.",
+        "logo": "/img/Nextjs.png",
+        "description": "Build performant, server-rendered React applications with static-site generation and SSR.",
         "years": 0.25,
-        "skillType": "React Framework for server rendering"
+        "skillType": "React Framework",
+        "className": "col-span-1 row-span-1"
     },
     {
         "skill": "Figma",
         "progress": 80,
-        "logo": "/img/HTML5.png",
-        "description": "Skilled in designing user-friendly interfaces and collaborating on design projects.",
+        "logo": "/img/Figma.png",
+        "description": "Design intuitive and engaging user interfaces with collaborative prototyping tools.",
         "years": 2.5,
-        "skillType": "Collaborative Tool for UI/UX Design"
+        "skillType": "UI/UX Design Tool",
+        "className": "col-span-2 row-span-2"
     },
     {
         "skill": "TypeScript",
         "progress": 20,
-        "logo": "/img/HTML5.png",
-        "description": "Understanding of strong typing and building scalable JavaScript applications.",
+        "logo": "/img/TypeScript.png",
+        "description": "Leverage strong typing in JavaScript to build scalable and maintainable applications.",
         "years": 0.25,
-        "skillType": "Typed Superset for scalable JavaScript"
+        "skillType": "Superset of JavaScript",
+        "className": "col-span-1 row-span-1"
     },
     {
         "skill": "WordPress",
         "progress": 20,
-        "logo": "/img/HTML5.png",
-        "description": "Buidling fully functional custom themes and websites.",
+        "logo": "/img/WordPress.png",
+        "description": "Develop custom themes and fully functional WordPress websites with PHP and MySQL.",
         "years": 0.25,
-        "skillType": "Typed Superset for scalable JavaScript"
+        "skillType": "Content Management System",
+        "className": "col-span-1 row-span-1"
     }
 ]

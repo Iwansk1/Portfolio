@@ -51,8 +51,8 @@ const SkillCard: React.FC<SkillCardProps> = ({ card }) => {
 							Expand
 						</span>
 					)}
-					<div className="bg-slate-900 shadow-lg w-full h-full flex justify-center rounded-md items-center">
-						<Image src={card.logo} alt={card.skill} width={50} height={50} className="rounded-md mb-5" />
+					<div className="bg-gray-700 shadow-lg w-full h-full flex justify-center rounded-md items-center">
+						<Image src={card.logo} alt={card.skill} width={50} height={50} />
 					</div>
 					<h2 className="text-xl font-bold">{card.skill}</h2>
 					<h3 className="text-lg">{card.skillType}</h3>

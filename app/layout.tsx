@@ -33,7 +33,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en" className="scroll-smooth">
 			<body
-				className={`${poppins.variable} relative font-sans flex flex-col min-h-screen overflow-x-hidden bg-gray-900 text-gray-100 m-0 p-0`}
+				className={`${poppins.variable} relative font-sans flex flex-col min-h-screen bg-gray-900 text-gray-100 m-0 p-0`}
 			>
 				{/* Sticky Navbar */}
 				<header className="sticky top-0 bg-slate-900 bg-opacity-95 shadow-2xl z-10">
