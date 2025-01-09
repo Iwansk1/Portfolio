@@ -7,7 +7,11 @@ const TechStack = () => {
 	return (
 		<div className="col-span-1 md:col-span-3 xl:col-span-4 xl:row-span-1">
 			<div className="grid-container">
-				<img src="/img/grid2.png" alt="Tech Stack" className="w-full h-64 object-contain rounded-lg" />
+				<img
+					src="/img/grid3.png"
+					alt="Tech Stack"
+					className="w-full md:w-fit self-center h-64 object-contain rounded-lg hover:rotate-[720deg] transition-all duration-[5500ms]"
+				/>
 				<div>
 					<p className="grid-headtext">TechStack</p>
 					<div className="my-4">
@@ -45,7 +49,8 @@ const TechStack = () => {
 							<span className="grid-highlight-text">HTML, CSS, and JavaScript</span> to build interactive
 							and visually appealing websites. I also use{' '}
 							<span className="grid-highlight-text">NextJS</span> for fast, SEO-friendly{' '}
-							<span className="grid-highlight-text">React </span>apps.
+							<span className="grid-highlight-text">React </span>apps. For the design of the website, I use{' '}
+							<span className="grid-highlight-text">Figma.</span>
 						</p>
 					)}
 

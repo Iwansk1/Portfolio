@@ -10,14 +10,19 @@ interface TypewriterSectionProps {
 
 const TypewriterSection: React.FC<TypewriterSectionProps> = ({ title, words }) => (
 	<div>
-		<p className="text-xl font-semibold">{title}</p>
+		<p className="grid-headtext">{title}</p>
 		<p className="grid-highlight-text">
 			<Typewriter words={words} loop={0} cursor={true} />
 		</p>
 	</div>
 );
 
-const whoAmIWords = ['A Full-Stack Developer. ', 'A Tech Enthusiast. ', 'Your next collaborator! '];
+const whoAmIWords = [
+	'A Full-Stack Developer. ',
+	'A Web Designer ',
+	'A Car Enthusiast. ',
+	'Your next collaborator! ',
+];
 const whatDoIDoWords = ['testing ', 'testing '];
 
 const BentoGrid = () => {
@@ -30,7 +35,6 @@ const BentoGrid = () => {
 					<div className="grid-container">
 						<img src="/img/david.jpg" alt="Profile" className="w-full h-64 object-contain rounded-lg" />
 						<div className="flex flex-col gap-4 mt-6 w-full">
-							<p className="grid-headtext">Hello</p>
 							<TypewriterSection title="Who am I?" words={whoAmIWords} />
 							<TypewriterSection title="What do I do?" words={whatDoIDoWords} />
 						</div>
@@ -40,7 +44,11 @@ const BentoGrid = () => {
 				{/* Grid Item 2 */}
 				<div className="col-span-1 xl:col-span-2 xl:row-span-1">
 					<div className="grid-container">
-						<img src="/img/grid2.png" alt="TechStack" className="w-full h-64 object-contain rounded-lg" />
+						<img
+							src="/img/grid4.png"
+							alt="Experience"
+							className="w-full h-64 object-contain rounded-lg"
+						/>
 						<div>
 							<p className="grid-headtext">Experience</p>
 							<div className="mt-6">
@@ -70,9 +78,9 @@ const BentoGrid = () => {
 						<div>
 							<p className="grid-headtext">Why I do what I do</p>
 							<p className="grid-subtext">
-								I love solving problems and building things through code. Programming isn&apos;t just my
-								profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my
-								skills.
+								I love solving problems and building beautiful things through code. Programming isn&apos;t
+								just my profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing
+								my skills every chance I get.
 							</p>
 						</div>
 					</div>

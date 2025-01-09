@@ -55,10 +55,7 @@ const ContactSection = () => {
 						<p className="mt-4 text-gray-300">
 							I&apos;m available for freelance projects, consultations, or collaborations.
 						</p>
-						<Link
-							href="/#contact"
-							className="self-center sm:self-start mt-6 w-fit px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold shadow-lg hover:bg-blue-100 transition duration-300"
-						>
+						<Link href="/#contact" className="btn-secondary w-fit mt-4">
 							Contact Me
 						</Link>
 					</div>
